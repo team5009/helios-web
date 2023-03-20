@@ -8,6 +8,9 @@ const darkModeSlice = createSlice({
     reducers: {
         toggleDarkMode(state) {
             state.darkMode = !state.darkMode
+        },
+        setDarkMode(state, actions) {
+            state.darkMode = actions.payload
         }
     }
 })
@@ -18,4 +21,4 @@ export const store = configureStore({
     },
 })
 
-export const {toggleDarkMode} = darkModeSlice.actions
+export const {toggleDarkMode, setDarkMode} = darkModeSlice.actions

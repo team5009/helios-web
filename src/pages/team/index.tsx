@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-import { EffectCoverflow, Pagination } from 'swiper';
+import { Navigation, Pagination } from 'swiper';
 
 export interface Team {
     name: string
@@ -24,6 +24,10 @@ export default function Team() {
     const manseauTime = new Date('2014-09-01T00:00:00.000Z')
     const steveTime = new Date('2012-09-01T00:00:00.000Z')
     const stephaneTime = new Date('2019-09-01T00:00:00.000Z')
+
+    const startTime = new Date('2011-09-01T00:00:00.000Z')
+    time.setMonth(8)
+    const currentSeasonYear = startTime.getFullYear() + (time.getFullYear() - startTime.getFullYear())
 
     const HeliosTeam: Team[] = [
         {
@@ -213,122 +217,243 @@ export default function Team() {
                     position: '3rd',
                 },
             ]
+        },
+        {
+            name: 'Helios (COVID Edition)',
+            year: 2021,
+            awards: [
+                {
+                    id: 'inspire',
+                    name: 'Inspire Award Winner',
+                    place: 'Remote'
+                },
+                {
+                    id: 'championship',
+                    name: 'Top Ranked Team',
+                    position: '4th',
+                    place: 'Remote'
+                },
+                {
+                    id: 'connect',
+                    name: 'Connect Award',
+                    position: '2nd',
+                    place: 'Remote'
+                },
+                {
+                    id: 'innovate',
+                    name: 'Collins Aerospace Innovate Award',
+                    position: '3rd',
+                    place: 'Remote'
+                },
+                {
+                    id: 'control',
+                    name: 'Control Award',
+                    position: '1st',
+                    place: 'Remote'
+                },
+                {
+                    id: 'motivate',
+                    name: 'Motivate Award',
+                    position: '3rd',
+                    place: 'Remote'
+                },
+                {
+                    id: 'design',
+                    name: 'Design Award',
+                    position: '3rd',
+                    place: 'Remote'
+                }
+            ]
+        },
+        {
+            name: 'Helios (COVID Edition)',
+            year: 2022,
+            awards: [
+                {
+                    id: 'connect',
+                    name: 'Compass Award',
+                    place: 'Remote'
+                }
+            ]
+        },
+        {
+            name: 'Helios',
+            year: 2023,
+            awards: [
+                {
+                    id: 'control',
+                    name: 'Control Award',
+                    position: '2nd',
+                },
+                {
+                    id: 'design',
+                    name: 'Design Award',
+                    position: '1st',
+                },
+                {
+                    id: 'innovate',
+                    name: 'Innovate Award',
+                    position: '1st',
+                },
+                {
+                    id: 'championship',
+                    name: 'Championship Finalist Alliance',
+                    position: 'Captain'
+                },
+                
+            ]
         }
     ]
 
+    console.log(currentSeasonYear)
+
     return (
        <>   
-            <div className='pt-24'/>
-            <Swiper
-            effect='coverflow'
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView='auto'
-            coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            }}
-            pagination={true}
-            modules={[EffectCoverflow, Pagination]}
-            className=''
-            >
-                {
-                    HeliosTeam.map((team, index) => {
-                        const year = team.year.toString()
+            {/* <div className='mt-10'/> */}
+            <div className='h-screen w-screen flex flex-col justify-center items-center'>
+                <h1 className='text-lg font-bold'>Our Current Team</h1>
+                <div className='aspect-video h-56 md:h-80 lg:h-96 bg-no-repeat bg-cover rounded-xl shadow-2xl' style={{
+                    backgroundImage: `url(/images/years/${currentSeasonYear}.png)`,
+                }}/>
+            </div>
+            <section className='relative top-0 m-0'>
+                <div className=' m-0 z-10 bg-orange-400'>
+                    <div className='h-10'/>
+                    <h2 className='mx-10 md:mx-20 lg:mx-48 text-2xl'>
+                        About Helios!
+                    </h2>
+                    <div className='box-border w-screen z-10 top-48 '>
+                        <p className='px-10 md:px-20 lg:px-48'>
+                        FTC Team Helios 5009 started {time.getFullYear() - startTime.getFullYear()} years ago, in 2011, when a group of former FLL members outgrew the program. 
+                        When these members graduated from middle school, they decided to start a <a href="https://www.firstinspires.org/" target='_blank' className='text-blue-600'>FIRST</a> Tech Challenge team at their new High School.
+                        The team started as an elective class held during school hours and grew into an after-school club available to all students. 
+                        The team has qualified for the world tournament each year since 2011, making it there a total of nine times, and has taken home the Inspire Award six times at the Canadian/Alberta Championship.
+                        Having said that, the group has had the chance to visit Houston, Texas, as well as St. Louis, Missouri, for the <a href="https://www.firstinspires.org/" target='_blank' className='text-blue-600'>FIRST</a> World Championship.
+                        </p>
+                        <br/>
+                    </div>
+                    <div className='h-10'/>
 
-                        // const image = team.year < 2014 || team.year == 2021 ? 
-                        // `bg-full-helios`
-                        // : 
-                        // `bg-year-${year}`
+                </div>
 
-                        let image = 'bg-full-helios'
-                        if (team.year == 2014) {
-                            image = 'bg-year-2014'
-                        } else if (team.year == 2015) {
-                            image = 'bg-year-2015'
-                        } else if (team.year == 2016) {
-                            image = 'bg-year-2016'
-                        } else if (team.year == 2017) {
-                            image = 'bg-year-2017'
-                        } else if (team.year == 2018) {
-                            image = 'bg-year-2018'
-                        } else if (team.year == 2019) {
-                            image = 'bg-year-2019'
-                        } else if (team.year == 2020) {
-                            image = 'bg-year-2020'
-                        } else if (team.year == 2022) {
-                            image = 'bg-year-2022'
-                        } else if (team.year == 2023) {
-                            image = 'bg-year-2023'
-                        } else if (team.year == 2024) {
-                            image = 'bg-year-2024'
-                        } else if (team.year == 2025) {
-                            image = 'bg-year-2025'
-                        } else if (team.year == 2026) {
-                            image = 'bg-year-2026'
-                        } else if (team.year == 2027) {
-                            image = 'bg-year-2027'
-                        } else if (team.year == 2028) {
-                            image = 'bg-year-2028'
-                        } else if (team.year == 2029) {
-                            image = 'bg-year-2029'
-                        } else if (team.year == 2030) {
-                            image = 'bg-year-2030'
-                        } else if (team.year == 2031) {
-                            image = 'bg-year-2031'
-                        } else if (team.year == 2032) {
-                            image = 'bg-year-2032'
-                        } else if (team.year == 2033) {
-                            image = 'bg-year-2033'
-                        } else if (team.year == 2034) {
-                            image = 'bg-year-2034'
-                        } else if (team.year == 2035) {
-                            image = 'bg-year-2035'
-                        }
-                            
-
-                        const teamName = 'text-3xl font-bold bg-clip-text text-transparent drop-shadow-2xl'
-
-                        
-                        return (
-                            <SwiperSlide key={index} className='w-[400px] h-[500px]'>
-                                <div className="relative bg-gray-400 h-[500px] w-[400px] m-[0_auto] rounded-md">
-                                    <div className={image + " aspect-video w-full bg-cover bg-center flex flex-col items-center justify-center"}>
-                                        <span className='drop-shadow-2xl'>Team 5009:</span>
-                                        {
-                                            team.name == 'Les Coureur des Bois' ?
-                                            <h3 className={teamName + " bg-gradient-to-r from-amber-800 to-amber-600"}>{team.name}</h3>
-                                            : team.name == 'Les Touristes' ?
-                                            <h3 className={teamName + " bg-gradient-to-r from-gray-400 to-gray-500"}>{team.name}</h3>
-                                            : team.name == 'Net Zero' ?
-                                            <h3 className={teamName + " bg-gradient-to-r from-green-600 to-green-400"}>{team.name}</h3>
-                                            : <h3 className={teamName + " bg-gradient-to-r from-red-600 to-orange-400"}>{team.name}</h3>
-                                        }
-                            
-
-                                    </div>
-                                    <div className="relative w-full flex flex-col items-center">
-                                        <span>{team.year - 1}-{team.year}</span>
-                                    </div>
-                                    <div className="flex gap-2 flex-wrap p-[3px] box-border">
-                                        {
-                                            team.awards?.map((award, index) => {
-                                                return (
-                                                    <span key={index} className="px-2 py-1 bg-blue-400 rounded-md text-sm">{award.name}</span>
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        )
-                    })
+            </section>
+            <div className='p-16'/>
+            <div className='flex items-center justify-center'>
+                <Swiper
+                grabCursor={true}
+                spaceBetween={30}
+                centeredSlides={true}
+                loop={true}
+                slidesPerView={1}
+                pagination={
+                    {
+                        clickable: true,
+                    }
                 }
-            </Swiper>
-            <div className='pt-24'/>
+                
+                navigation={true}
+                modules={[Navigation, Pagination]}
+                className=''
+                >
+                    {
+                        HeliosTeam.map((team, index) => {
+                            // const year = team.year.toString()
+                            let imageBg = `/images/years/${team.year}.png`
+                            {
+                                if (team.year == 2013 || team.year == 2021 || team.year == 2012) {
+                                    imageBg = '/images/fullscreen-helios.png'
+                                    console.log(team.year)
+                                }
+                            }
+                                
+                            const teamName = 'text-2xl md:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent drop-shadow-2xl'
+
+                            return (
+                                <SwiperSlide key={index} className='w-[400px] h-[500px]'>
+                                    <div className="flex md:flex-row flex-col mx-24 gap-5">
+                                        <div className={" aspect-video lg:h-64 md:h-56 h-40 bg-cover bg-center flex flex-col items-center justify-end rounded-xl"} style={{background: `url('${imageBg}') center center`, backgroundSize: 'cover'}}>
+                                            <div className='px-5 py-2 backdrop-blur-sm rounded-lg font-semibold mb-5'>
+                                                {team.year - 1} - {team.year} 
+                                            </div>
+                                        </div>
+                                        <div className='flex flex-col gap-3'>
+                                            <div>
+                                                <span className='drop-shadow-2xl lg:text-2xl md:text-md'>Team 5009:</span>
+                                                {
+                                                    team.name == 'Les Coureur des Bois' ?
+                                                    <h3 className={teamName + " bg-gradient-to-r from-amber-800 to-amber-600"}>{team.name}</h3>
+                                                    : team.name == 'Les Touristes' ?
+                                                    <h3 className={teamName + " bg-gradient-to-r from-gray-400 to-gray-500"}>{team.name}</h3>
+                                                    : team.name == 'Net Zero' ?
+                                                    <h3 className={teamName + " bg-gradient-to-r from-green-600 to-green-400"}>{team.name}</h3>
+                                                    : <h3 className={teamName + " bg-gradient-to-r from-red-600 to-orange-400"}>{team.name}</h3>
+                                                }
+                                            </div>
+                                            <div className='flex gap-2 flex-wrap'>
+                                            {
+                                                    team.awards?.map((award, index) => {
+                                                        let awardBg
+                                                        const awardText: String[] = []
+                                                        {
+                                                            if (award.id == 'championship') {
+                                                                awardBg = 'bg-amber-500'
+                                                            } else if (award.id == 'inspire') {
+                                                                awardBg = 'bg-orange-500'
+                                                            } else if (award.id == 'motivate') {
+                                                                awardBg = 'bg-green-500'
+                                                            } else if (award.id == 'control') {
+                                                                awardBg = 'bg-blue-500'
+                                                            } else if (award.id == 'judge') {
+                                                                awardBg = 'bg-red-500'
+                                                            } else if (award.id == 'design') {
+                                                                awardBg = 'bg-yellow-500'
+                                                            } else if (award.id == 'innovate') {
+                                                                awardBg = 'bg-purple-500'
+                                                            } else if (award.id == 'connect') {
+                                                                awardBg = 'bg-gray-500'
+                                                            }
+                                                        }
+                                                        
+                                                        awardText.push(award.name)
+                                                        
+                                                        if (award.position != undefined) {
+                                                            awardText.push(`- ${award.position}`)
+                                                        }
+                                                        if (award.place != undefined) {
+                                                            awardText.push(`[${award.place}]`)
+                                                        }
+
+                                                    
+                                                        return (
+                                                            <span key={index} className={awardBg + " px-2 py-1  rounded-md text-2xs md:text-xs flex"}>{awardText.join(' ')}</span>
+                                                        )
+
+                                                    })
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className='grid grid-rows-3 grid-flow-col gap-4'>
+                                        <div className='row-span-3'>
+                                        </div>
+                                        <div className='col-span-2'>
+                                            
+                                        </div>
+                                        <div className='row-span-2 gap-5'>
+                                            <div className={"w-full h-full flex flex-wrap"}>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                </Swiper>
+            </div>
+            <div className='p-14'/>
+            
        </>
     )
 }

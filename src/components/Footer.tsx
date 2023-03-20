@@ -34,18 +34,18 @@ export default () => {
 
     const waveClass = "absolute -top-24 left-0 w-full h-24 bg-[url('/images/general/wave.png')] bg-[length:1000px_100px]"
     return (
-        <footer className="relative mt-10">
+        <footer className="relative">
             <div className="">
                 <div className={`${waveClass} opacity-100 bottom-0 z-50 animate-[animateWave_7s_linear_infinite]`}></div>
-                <div className={`${waveClass} opacity-50 bottom-1 z-40 animate-[animateWave2_10s_linear_infinite]`}></div>
-                <div className={`${waveClass} opacity-20 bottom-2 z-50 animate-[animateWave_13s_linear_infinite]`}></div>
-                <div className={`${waveClass} opacity-70 bottom-3 z-40 animate-[animateWave2_16s_linear_infinite]`}></div>
+                <div className={`${waveClass} opacity-50 bottom-1 z-40 animate-[animateWave2_14s_linear_infinite]`}></div>
+                <div className={`${waveClass} opacity-20 bottom-2 z-50 animate-[animateWave_21s_linear_infinite]`}></div>
+                <div className={`${waveClass} opacity-70 bottom-3 z-40 animate-[animateWave2_28s_linear_infinite]`}></div>
             </div>
             <div className='flex flex-col items-center justify-center w-screen h-32 bg-orange-600'>
                 <ul className="relative flex gap-5 z-10 mt-5">
                     {socials.map((social, index) => {
                         return (
-                            <li key={social.name} className='transition-all shadow-white hover:drop-shadow-xl hover:-translate-y-1 focus:-translate-y-0.5'>
+                            <li key={social.name} className='transition-all shadow-white hover:drop-shadow-md hover:-translate-y-1 focus:-translate-y-0.5'>
                                 <a href={social.link} target='_blank' className='relative text-white text-3xl '>
                                     <social.icon className=""/>
                                 </a>
