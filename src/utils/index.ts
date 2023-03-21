@@ -1,4 +1,5 @@
 import {configureStore, createSlice} from '@reduxjs/toolkit'
+import {Language} from './enum'
 
 const darkModeSlice = createSlice({
     name: 'darkMode',
@@ -15,10 +16,24 @@ const darkModeSlice = createSlice({
     }
 })
 
+const languageSlice = createSlice({
+    name: 'language',
+    initialState: {
+        language: Language.EN
+    },
+    reducers: {
+        changeLang(state, action) {
+            state.language = action.payload as Language
+        }
+    }
+})
+
 export const store = configureStore({
     reducer: {
-        darkMode: darkModeSlice.reducer
+        darkMode: darkModeSlice.reducer,
+        language: languageSlice.reducer
     },
 })
 
 export const {toggleDarkMode, setDarkMode} = darkModeSlice.actions
+export const {changeLang} = languageSlice.actions

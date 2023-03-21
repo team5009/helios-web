@@ -17,7 +17,7 @@ export default function Home() {
         <div>
           <h2 className='text-3xl hidden md:inline-block dark:text-white'>Team 5009:</h2>
           <h1 className='hidden md:block text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-orange-400'>Helios</h1>
-          <p className='w-96 dark:text-white'>
+          <p className='text-justify w-72 md:w-96 md:text-base text-sm dark:text-white'>
           Providing opportunities for students to participate in the FIRST Tech Challenge, a robotics program, and gain first-hand STEM experience.
           </p>
         </div>

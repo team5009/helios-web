@@ -312,7 +312,7 @@ export default function Team() {
             {/* <div className='mt-10'/> */}
             <div className='h-screen w-screen flex flex-col justify-center items-center'>
                 <h1 className='text-lg font-bold'>Our Current Team</h1>
-                <div className='aspect-video h-56 md:h-80 lg:h-96 bg-no-repeat bg-cover rounded-xl shadow-2xl' style={{
+                <div className='aspect-video h-44 md:h-56 lg:h-96 bg-no-repeat bg-cover rounded-xl shadow-2xl' style={{
                     backgroundImage: `url(/images/years/${currentSeasonYear}.png)`,
                 }}/>
             </div>

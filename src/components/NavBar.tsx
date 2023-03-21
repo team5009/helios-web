@@ -2,6 +2,7 @@ import Link from "next/link"
 import { useState } from 'react'
 
 import {BsCaretDownFill} from 'react-icons/bs'
+import French from "./French"
 
 export default () => {
     const [open, setOpen] = useState('invisible opacity-0')
@@ -55,6 +56,9 @@ export default () => {
                         </div>
                     </label>
                 </div>
+                <div className="block md:hidden ml-1">
+                <French/>
+                </div>
 
             </div>
             <ul 
@@ -70,6 +74,9 @@ export default () => {
                     </li>
                 ))}
             </ul>
+            <div className="hidden md:block ml-auto">
+                <French/>
+            </div>
         </nav>
     )
 }
