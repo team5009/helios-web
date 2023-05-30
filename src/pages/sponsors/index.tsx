@@ -27,7 +27,7 @@ export default () => {
         <>
         <div className="h-12 md:hidden"/>
         <div className="h-screen w-screen flex flex-col justify-center items-center m-0">
-            <h1 className="font-bold text-lg md:text-2xl mb-5 mt-10">Thanks to all our sponsors & supporters!</h1>
+            <h1 className="font-bold text-lg md:text-2xl mb-5 mt-10">Merci à tous nos sponsors et supporters!</h1>
             <div className="flex gap-10 flex-col md:flex-row items-center justify-center flex-wrap w-full box-border px-20">
                 {
                     sponsors.map((sponsor, index) => {
