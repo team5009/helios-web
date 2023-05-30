@@ -5,6 +5,10 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 import { Navigation, Pagination } from 'swiper';
+import { useSelector } from 'react-redux';
+import { Language } from '@/utils/enum';
+
+import TeamJson from '../../utils/extra/team.json'
 
 export interface Team {
     name: string
@@ -20,318 +24,57 @@ export interface Award {
 }
 
 export default function Team() {
+    const langStore = useSelector((state: any) => state.language)
     const time = new Date()
-    const manseauTime = new Date('2014-09-01T00:00:00.000Z')
-    const steveTime = new Date('2012-09-01T00:00:00.000Z')
-    const stephaneTime = new Date('2019-09-01T00:00:00.000Z')
 
     const startTime = new Date('2011-09-01T00:00:00.000Z')
     time.setMonth(8)
     const currentSeasonYear = startTime.getFullYear() + (time.getFullYear() - startTime.getFullYear())
 
-    const HeliosTeam: Team[] = [
-        {
-            name: 'Les Coureur des Bois',
-            year: 2012,
-            awards: [
-                {
-                    id: 'inspire',
-                    name: 'Inspire Award Winner',
-                },
-                {
-                    id: 'championship',
-                    name: 'Championship Winning Alliance',
-                }
-            ]
-        },
-        {
-            name: 'Les Touristes',
-            year: 2013,
-            awards: [
-                {
-                    id: 'inspire',
-                    name: 'Inspire Award',
-                    position: '2nd',
-                },
-                {
-                    id: 'design',
-                    name: 'PTC Design Award',
-                    position: '1st',
-                },
-                {
-                    id: 'championship',
-                    name: 'Championship Winning Alliance',
-                }
-            ]
-        },
-        {
-            name: 'Net Zero',
-            year: 2014,
-            awards: [
-                {
-                    id: 'inspire',
-                    name: 'Inspire Award Winner',
-                },
-                {
-                    id: 'championship',
-                    name: 'Championship Finalist Alliance',
-                }
-            ]
-        },
-        {
-            name: 'Helios',
-            year: 2015,
-            awards: [
-                {
-                    id: 'inspire',
-                    name: 'Inspire Award Winner',
-                },
-                {
-                    id: 'championship',
-                    name: 'Championship Winning Alliance',
-                }
-            ]
-        },
-        {
-            name: 'Helios',
-            year: 2016,
-            awards: [
-                {
-                    id: 'inspire',
-                    name: 'Inspire Award Winner',
-                },
-                {
-                    id: 'championship',
-                    name: 'Championship Finalist Alliance',
-                }
-            ]
-        },
-        {
-            name: 'Helios',
-            year: 2017,
-            awards: [
-                {
-                    id: 'inspire',
-                    name: 'Inspire Award',
-                    position: '2nd',
-                },
-                {
-                    id: 'innovate',
-                    name: 'Rockwell Collins Innovate Award',
-                    position: '1st',
-                },
-                {
-                    id: 'inspire',
-                    name: 'Inspire Award',
-                    position: '3rd',
-                    place: 'BC Championship'
-                },
-                {
-                    id: 'design',
-                    name: 'PTC Design Award',
-                    position: '1st',
-                    place: 'BC Championship'
-                },
-                {
-                    id: 'championship',
-                    name: 'Championship Finalist Alliance',
-                    place: 'BC Championship'
-                }
-            ]
-        },
-        {
-            name: 'Helios',
-            year: 2018,
-            awards: [
-                {
-                    id: 'inspire',
-                    name: 'Inspire Award Winner',
-                },
-                {
-                    id: 'control',
-                    name: 'Control Award',
-                    position: '1st',
-                },
-                {
-                    id: 'championship',
-                    name: 'Championship Winning Alliance',
-                },
-                {
-                    id: 'judge',
-                    name: 'Judges Award',
-                    place: 'World Championship'
-                }
-            ]
-        },
-        {
-            name: 'Helios',
-            year: 2019,
-            awards: [
-                {
-                    id: "championship",
-                    name: "Highest Ranked Team",
-                    place: "Second Round Edmonton"
-                },
-                {
-                    id: 'inspire',
-                    name: 'Inspire Award Winner',
-                },
-                {
-                    id: 'championship',
-                    name: 'Championship Winning Alliance',
-                },
-                {
-                    id: 'championship',
-                    name: 'Ranked 6th - Jemison Division',
-                    place: 'World Championship'
-                },
-            ]
-        },
-        {
-            name: 'Helios',
-            year: 2020,
-            awards: [
-                {
-                    id: 'championship',
-                    name: 'Highest Ranked Team',
-                    place: 'First Round Edmonton'
-                },
-                {
-                    id: 'championship',
-                    name: 'Highest Ranked Team',
-                    place: 'Northern Alberta League'
-                },
-                {
-                    id: 'motivate',
-                    name: 'Motivate Award',
-                    position: '1st',
-                },
-                {
-                    id: 'control',
-                    name: 'Control Award',
-                    position: '1st',
-                },
-                {
-                    id: 'inspire',
-                    name: 'Inspire Award',
-                    position: '3rd',
-                },
-            ]
-        },
-        {
-            name: 'Helios (COVID Edition)',
-            year: 2021,
-            awards: [
-                {
-                    id: 'inspire',
-                    name: 'Inspire Award Winner',
-                    place: 'Remote'
-                },
-                {
-                    id: 'championship',
-                    name: 'Top Ranked Team',
-                    position: '4th',
-                    place: 'Remote'
-                },
-                {
-                    id: 'connect',
-                    name: 'Connect Award',
-                    position: '2nd',
-                    place: 'Remote'
-                },
-                {
-                    id: 'innovate',
-                    name: 'Collins Aerospace Innovate Award',
-                    position: '3rd',
-                    place: 'Remote'
-                },
-                {
-                    id: 'control',
-                    name: 'Control Award',
-                    position: '1st',
-                    place: 'Remote'
-                },
-                {
-                    id: 'motivate',
-                    name: 'Motivate Award',
-                    position: '3rd',
-                    place: 'Remote'
-                },
-                {
-                    id: 'design',
-                    name: 'Design Award',
-                    position: '3rd',
-                    place: 'Remote'
-                }
-            ]
-        },
-        {
-            name: 'Helios (COVID Edition)',
-            year: 2022,
-            awards: [
-                {
-                    id: 'connect',
-                    name: 'Compass Award',
-                    place: 'Remote'
-                }
-            ]
-        },
-        {
-            name: 'Helios',
-            year: 2023,
-            awards: [
-                {
-                    id: 'control',
-                    name: 'Control Award',
-                    position: '2nd',
-                },
-                {
-                    id: 'design',
-                    name: 'Design Award',
-                    position: '1st',
-                },
-                {
-                    id: 'innovate',
-                    name: 'Innovate Award',
-                    position: '1st',
-                },
-                {
-                    id: 'championship',
-                    name: 'Championship Finalist Alliance',
-                    position: 'Captain'
-                },
-                
-            ]
-        }
-    ]
+    const englishText = () => (
+        <>
+        Team Helios 5009 is a francophone robotics club established at the <a href="https://ml.centrenord.ab.ca/" target='_blank' className="text-yellow-500 hover:bg-yellow-300 hover:bg-opacity-5 hover:p-0.5 rounded-md">Maurice-Lavallée</a> School in Edmonton, Alberta.
+        Since 2011, we have participated in the FIRST Tech Challenge competition, with great success, after a group of former FLL members outgrew the program and decided to form team Helios.
+        As one of Alberta's veteran, yet still very active, teams, we have qualified for several provincial championships as well as for the <a href="https://www.firstinspires.org/" target='_blank' className='text-blue-600'>FIRST</a> World Championship 9 times in a row, allowing us to travel to both St. Louis, Missouri and Houston, Texas, to compete with teams from all over the world! 
+        Since its creation, our team has been comprised of many talented, bright students from varied backgrounds, as well as an exceptional group of helpful mentors, <a href="https://www.firstinspires.org/" target='_blank' className='text-blue-600'>FIRST</a> alumni, teachers, and parents. 
+        This program has benefited our members in acquiring skills not only in the field of robotics, such as manufacturing and programming, but also in leadership, cooperation, problem-solving, and creativity.
+        </>
+    )
 
-    console.log(currentSeasonYear)
+    const frenchText = () => (
+        <>
+        L'équipe Hélios 5009 est un club de robotique francophone fondé à l'école <a href="https://ml.centrenord.ab.ca/" target='_blank' className="text-yellow-500 hover:bg-yellow-300 hover:bg-opacity-5 hover:p-0.5 rounded-md">Maurice-Lavallée</a> à Edmonton, en Alberta.
+        Depuis 2011, nous participons avec grand succès à la compétition FIRST Tech Challenge, après qu'un groupe d'anciens membres de la FLL a dépassé le programme et a donc décidé de former l'équipe Hélios.
+        En tant qu'une des équipes vétérans de l'Alberta, bien que toujours très active, nous nous sommes qualifiés à plusieurs reprises pour les championnats provinciaux ainsi que pour le championnat du monde <a href="https://www.firstinspires.org/" target='_blank' className='text-blue-600'>FIRST</a>. 
+        Cela nous a permis de voyager à St. Louis, au Missouri, et à Houston, au Texas, pour participer avec des équipes du monde entier! 
+        Depuis sa création, notre équipe a été composée de nombreux étudiants talentueux et brillants de diverses origines, ainsi que d'un groupe exceptionnel de mentors, d'anciens participants de <a href="https://www.firstinspires.org/" target='_blank' className='text-blue-600'>FIRST</a>, d'enseignants et de parents. 
+        Ce programme a permis à nos membres d'acquérir des compétences non seulement dans le domaine de la robotique, telles que la fabrication et la programmation, mais aussi dans le leadership, la coopération, la résolution de problèmes et la créativité.
+        </>
+    )
 
     return (
        <>   
             {/* <div className='mt-10'/> */}
-            <div className='h-screen w-screen flex flex-col justify-center items-center'>
-                <h1 className='text-lg font-bold'>Our Current Team</h1>
-                <div className='aspect-video h-44 md:h-56 lg:h-96 bg-no-repeat bg-cover rounded-xl shadow-2xl' style={{
+            <div className='relative top-28 w-screen flex flex-col justify-center items-center'>
+                <h1 className='text-lg font-bold'>{}</h1>
+                <div className='aspect-video h-[40vw] bg-no-repeat bg-cover rounded-xl shadow-2xl' style={{
                     backgroundImage: `url(/images/years/${currentSeasonYear}.png)`,
                 }}/>
+                <h2 className='mt-10 mx-10 md:mx-20 lg:mx-48 text-2xl font-bold'>
+                    { langStore.language == Language.FR ?
+                    `A propos l'équipe!` : 'About the team!'}
+                </h2>
+                <div className='box-border w-screen z-10 top-48 '>
+                    <p className='px-10 md:px-20 lg:px-48'>
+                        { langStore.language == Language.FR ? 
+                        frenchText() : englishText()}
+                    </p>
+                    <br/>
+                </div>
             </div>
             <section className='relative top-0 m-0'>
-                <div className=' m-0 z-10 bg-orange-400'>
+                <div className=' m-0 z-10'>
                     <div className='h-10'/>
-                    <h2 className='mx-10 md:mx-20 lg:mx-48 text-2xl'>
-                        About Helios!
-                    </h2>
-                    <div className='box-border w-screen z-10 top-48 '>
-                        <p className='px-10 md:px-20 lg:px-48'>
-                        FTC Team Helios 5009 started {time.getFullYear() - startTime.getFullYear()} years ago, in 2011, when a group of former FLL members outgrew the program. 
-                        When these members graduated from middle school, they decided to start a <a href="https://www.firstinspires.org/" target='_blank' className='text-blue-600'>FIRST</a> Tech Challenge team at their new High School.
-                        The team started as an elective class held during school hours and grew into an after-school club available to all students. 
-                        The team has qualified for the world tournament each year since 2011, making it there a total of nine times, and has taken home the Inspire Award six times at the Canadian/Alberta Championship.
-                        Having said that, the group has had the chance to visit Houston, Texas, as well as St. Louis, Missouri, for the <a href="https://www.firstinspires.org/" target='_blank' className='text-blue-600'>FIRST</a> World Championship.
-                        </p>
-                        <br/>
-                    </div>
                     <div className='h-10'/>
 
                 </div>
@@ -356,13 +99,12 @@ export default function Team() {
                 className=''
                 >
                     {
-                        HeliosTeam.map((team, index) => {
+                        TeamJson.map((team, index) => {
                             // const year = team.year.toString()
                             let imageBg = `/images/years/${team.year}.png`
                             {
                                 if (team.year == 2013 || team.year == 2021 || team.year == 2012) {
                                     imageBg = '/images/fullscreen-helios.png'
-                                    console.log(team.year)
                                 }
                             }
                                 
@@ -370,8 +112,8 @@ export default function Team() {
 
                             return (
                                 <SwiperSlide key={index} className='w-[400px] h-[500px]'>
-                                    <div className="flex md:flex-row flex-col mx-24 gap-5">
-                                        <div className={" aspect-video lg:h-64 md:h-56 h-40 bg-cover bg-center flex flex-col items-center justify-end rounded-xl"} style={{background: `url('${imageBg}') center center`, backgroundSize: 'cover'}}>
+                                    <div className="flex md:flex-row flex-col md:mx-24 mx-5 gap-5">
+                                        <div className={" aspect-video lg:h-64 md:h-56 min-w-[290px] h-40 bg-cover bg-center flex flex-col items-center justify-end rounded-xl"} style={{background: `url('${imageBg}') center center`, backgroundSize: 'cover'}}>
                                             <div className='px-5 py-2 backdrop-blur-sm rounded-lg font-semibold mb-5'>
                                                 {team.year - 1} - {team.year} 
                                             </div>
