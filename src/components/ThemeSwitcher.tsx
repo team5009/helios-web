@@ -10,26 +10,23 @@ export default () => {
     const { theme, setTheme } = useTheme()
 
     useEffect(() => {
-        if (localStorage.getItem('darkMode') != null) {
-            distpatch(setDarkMode(localStorage.getItem('darkMode')))
-            localStorage.setItem('darkMode', themeStore.darkMode)
+        if (localStorage.getItem('darkMode') === 'true') {
+            distpatch(setDarkMode(true))
+        } else if (localStorage.getItem('darkMode') === 'false') {
+            distpatch(setDarkMode(false))
         }
-
-        if (themeStore.darkMode) {
-            setTheme('dark')
-        } else {
-            setTheme('light')
-        }
-    
     }, [])
-
     
     return (
         <button 
         onClick={() => {
             setTheme(theme === 'dark' ? 'light' : 'dark')
-            distpatch(toggleDarkMode())
-            localStorage.setItem('darkMode', themeStore.darkMode)
+            if (theme === 'dark') {
+                distpatch(setDarkMode(true))
+            } else {
+                distpatch(setDarkMode(!true))
+            }
+            // localStorage.setItem('darkMode', themeStore.darkMode)
         }}
         className={`
         bg-[#1a202c] text-white dark:bg-white dark:text-black

@@ -17,7 +17,7 @@ module.exports = {
         'helios-logo': "url('/images/helioslogo.png')",
       },
       animation: {
-        
+        slideRight: "slideRight 0.5s ease-in-out",
       },
       keyframes: {
         'animateWave': {
@@ -28,8 +28,13 @@ module.exports = {
           '0%': {'background-position-x': '0px'},
           '100%': {'background-position-x': '1000px'}
         },
+        "slideRight": {
+          "0%": { transform: "translateX(-100%)", opacity: 0 },
+          "100%": { transform: "translateX(0)", opacity: 1 },
+        }
       },
     },
+  
   },
   plugins: [],
   darkMode: 'class'

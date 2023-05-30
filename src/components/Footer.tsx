@@ -1,8 +1,11 @@
 import {AiFillYoutube, AiFillTwitterSquare, AiFillInstagram, AiFillGithub, AiFillMail} from 'react-icons/ai'
 import Helioslogo from './Helioslogo'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
+import { Language } from '@/utils/enum'
 
 export default () => {
+    const langStore = useSelector((state: any) => state.language)
 
     const socials = [
         {
@@ -77,7 +80,7 @@ export default () => {
                     <Link href='/'>
                         <Helioslogo color='#fff' height='40' width='30'/>
                     </Link>
-                    <span className="text-white text-xs">{new Date().getFullYear()} FTC, Team 5009</span>
+                    <span className="text-white text-xs">{new Date().getFullYear()} <Link href="https://www.firstinspires.org/" target='_blank'>FTC</Link>, {langStore.language == Language.FR ? 'Équipe' : 'Team'} 5009</span>
                 </div>
                 <div className='bg-gray-800 pt-5'></div>
             </div>

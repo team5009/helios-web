@@ -12,6 +12,7 @@ const darkModeSlice = createSlice({
         },
         setDarkMode(state, actions) {
             state.darkMode = actions.payload
+            localStorage.setItem('darkMode', JSON.stringify(state.darkMode))
         }
     }
 })
@@ -37,3 +38,6 @@ export const store = configureStore({
 
 export const {toggleDarkMode, setDarkMode} = darkModeSlice.actions
 export const {changeLang} = languageSlice.actions
+
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch

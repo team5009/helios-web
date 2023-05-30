@@ -3,8 +3,11 @@ import { useState } from 'react'
 
 import {BsCaretDownFill} from 'react-icons/bs'
 import French from "./French"
+import { useSelector } from "react-redux"
+import { Language } from "@/utils/enum"
 
-export default () => {
+export default () => { 
+    const langStore = useSelector((state: any) => state.language)
     const [open, setOpen] = useState('invisible opacity-0')
     const [rotation, setRotation] = useState('rotate-90')
 
@@ -23,15 +26,31 @@ export default () => {
 
     const options = [
         {
-            name: 'Our Teams',
+            name: {
+                en: 'Our Team',
+                fr: 'Notre Équipe'
+            },
             link: '/team',
         },
+        // {
+        //     name: {
+        //         en: 'Our Bots',
+        //         fr: 'Nos Robots'
+        //     },
+        //     link: '/bots',
+        // },
         {
-            name: 'Sponsors',
+            name: {
+                en: 'Our Sponsors',
+                fr: 'Nos Sponsors'
+            },
             link: '/sponsors',
         },
         {
-            name: 'Contact Us',
+            name: {
+                en: 'Contact Us',
+                fr: 'Contactez-Nous'
+            },
             link: '/contact',
         }
     ]
@@ -51,7 +70,7 @@ export default () => {
                 <div className="ml-auto">
                     <input id="menuInput" className="ml-auto hidden" onChange={setOpenState} type="checkbox"/>
                     <label htmlFor="menuInput">
-                        <div className={rotation + " transition-transform duration-200 md:hidden"}>
+                        <div className={rotation + " transition-transform duration-200 md:hidden cursor-pointer"}>
                             <BsCaretDownFill className="text-2xl text-gray-800 dark:text-white"/>
                         </div>
                     </label>
@@ -66,9 +85,10 @@ export default () => {
             >
                 {options.map((option, index) => (
                     <li key={index} className="w-full md:w-auto">
-                        <Link href={`${option.link}`} className="transition-all duration-200 px-5 py-2 hover:bg-orange-400 focus:bg-orange-500 hover:font-semibold rounded-md shadow-md dark:text-white inline-block md:block w-full">
+                        <Link href={`${option.link}`} className="transition-all duration-200 m-2 md:m-0 px-5 py-2 hover:bg-orange-400 focus:bg-orange-500 hover:font-semibold rounded-md shadow-md dark:text-white inline-block md:block w-full">
                             <span >
-                                {option.name}  
+                                {langStore.language == Language.FR ?
+                                    option.name.fr : option.name.en}  
                             </span>
                         </Link>
                     </li>

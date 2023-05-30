@@ -1,0 +1,275 @@
+[
+    {
+        "name": "Les Coureur des Bois",
+        "year": 2012,
+        "awards": [
+            {
+                "id": "inspire",
+                "name": "Inspire Award Winner"
+            },
+            {
+                "id": "championship",
+                "name": "Championship Winning Alliance"
+            }
+        ]
+    },
+    {
+        "name": "Les Touristes",
+        "year": 2013,
+        "awards": [
+            {
+                "id": "inspire",
+                "name": "Inspire Award",
+                "position": "2nd"
+            },
+            {
+                "id": "design",
+                "name": "PTC Design Award",
+                "position": "1st"
+            },
+            {
+                "id": "championship",
+                "name": "Championship Winning Alliance"
+            }
+        ]
+    },
+    {
+        "name": "Net Zero",
+        "year": 2014,
+        "awards": [
+            {
+                "id": "inspire",
+                "name": "Inspire Award Winner"
+            },
+            {
+                "id": "championship",
+                "name": "Championship Finalist Alliance"
+            }
+        ]
+    },
+    {
+        "name": "Helios",
+        "year": 2015,
+        "awards": [
+            {
+                "id": "inspire",
+                "name": "Inspire Award Winner"
+            },
+            {
+                "id": "championship",
+                "name": "Championship Winning Alliance"
+            }
+        ]
+    },
+    {
+        "name": "Helios",
+        "year": 2016,
+        "awards": [
+            {
+                "id": "inspire",
+                "name": "Inspire Award Winner"
+            },
+            {
+                "id": "championship",
+                "name": "Championship Finalist Alliance"
+            }
+        ]
+    },
+    {
+        "name": "Helios",
+        "year": 2017,
+        "awards": [
+            {
+                "id": "inspire",
+                "name": "Inspire Award",
+                "position": "2nd"
+            },
+            {
+                "id": "innovate",
+                "name": "Rockwell Collins Innovate Award",
+                "position": "1st"
+            },
+            {
+                "id": "inspire",
+                "name": "Inspire Award",
+                "position": "3rd",
+                "place": "BC Championship"
+            },
+            {
+                "id": "design",
+                "name": "PTC Design Award",
+                "position": "1st",
+                "place": "BC Championship"
+            },
+            {
+                "id": "championship",
+                "name": "Championship Finalist Alliance",
+                "place": "BC Championship"
+            }
+        ]
+    },
+    {
+        "name": "Helios",
+        "year": 2018,
+        "awards": [
+            {
+                "id": "inspire",
+                "name": "Inspire Award Winner"
+            },
+            {
+                "id": "control",
+                "name": "Control Award",
+                "position": "1st"
+            },
+            {
+                "id": "championship",
+                "name": "Championship Winning Alliance"
+            },
+            {
+                "id": "judge",
+                "name": "Judges Award",
+                "place": "World Championship"
+            }
+        ]
+    },
+    {
+        "name": "Helios",
+        "year": 2019,
+        "awards": [
+            {
+                "id": "championship",
+                "name": "Highest Ranked Team",
+                "place": "Second Round Edmonton"
+            },
+            {
+                "id": "inspire",
+                "name": "Inspire Award Winner"
+            },
+            {
+                "id": "championship",
+                "name": "Championship Winning Alliance"
+            },
+            {
+                "id": "championship",
+                "name": "Ranked 6th - Jemison Division",
+                "place": "World Championship"
+            }
+        ]
+    },
+    {
+        "name": "Helios",
+        "year": 2020,
+        "awards": [
+            {
+                "id": "championship",
+                "name": "Highest Ranked Team",
+                "place": "First Round Edmonton"
+            },
+            {
+                "id": "championship",
+                "name": "Highest Ranked Team",
+                "place": "Northern Alberta League"
+            },
+            {
+                "id": "motivate",
+                "name": "Motivate Award",
+                "position": "1st"
+            },
+            {
+                "id": "control",
+                "name": "Control Award",
+                "position": "1st"
+            },
+            {
+                "id": "inspire",
+                "name": "Inspire Award",
+                "position": "3rd"
+            }
+        ]
+    },
+    {
+        "name": "Helios (COVID)",
+        "year": 2021,
+        "awards": [
+            {
+                "id": "inspire",
+                "name": "Inspire Award Winner",
+                "place": "Remote"
+            },
+            {
+                "id": "championship",
+                "name": "Top Ranked Team",
+                "position": "4th",
+                "place": "Remote"
+            },
+            {
+                "id": "connect",
+                "name": "Connect Award",
+                "position": "2nd",
+                "place": "Remote"
+            },
+            {
+                "id": "innovate",
+                "name": "Collins Aerospace Innovate Award",
+                "position": "3rd",
+                "place": "Remote"
+            },
+            {
+                "id": "control",
+                "name": "Control Award",
+                "position": "1st",
+                "place": "Remote"
+            },
+            {
+                "id": "motivate",
+                "name": "Motivate Award",
+                "position": "3rd",
+                "place": "Remote"
+            },
+            {
+                "id": "design",
+                "name": "Design Award",
+                "position": "3rd",
+                "place": "Remote"
+            }
+        ]
+    },
+    {
+        "name": "Helios (COVID)",
+        "year": 2022,
+        "awards": [
+            {
+                "id": "connect",
+                "name": "Compass Award",
+                "place": "Remote"
+            }
+        ]
+    },
+    {
+        "name": "Helios",
+        "year": 2023,
+        "awards": [
+            {
+                "id": "control",
+                "name": "Control Award",
+                "position": "2nd"
+            },
+            {
+                "id": "design",
+                "name": "Design Award",
+                "position": "1st"
+            },
+            {
+                "id": "innovate",
+                "name": "Innovate Award",
+                "position": "1st"
+            },
+            {
+                "id": "championship",
+                "name": "Championship Finalist Alliance",
+                "position": "Captain"
+            }
+            
+        ]
+    }
+]
