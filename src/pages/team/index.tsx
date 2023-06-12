@@ -43,12 +43,10 @@ export default function Team() {
 
     const frenchText = () => (
         <>
-        L'équipe Hélios 5009 est un club de robotique francophone fondé à l'école <a href="https://ml.centrenord.ab.ca/" target='_blank' className="text-yellow-500 hover:bg-yellow-300 hover:bg-opacity-5 hover:p-0.5 rounded-md">Maurice-Lavallée</a> à Edmonton, en Alberta.
-        Depuis 2011, nous participons avec grand succès à la compétition FIRST Tech Challenge, après qu'un groupe d'anciens membres de la FLL a dépassé le programme et a donc décidé de former l'équipe Hélios.
+        Hélios 5009 est un club de robotique francophone fondé à l'école <a href="https://ml.centrenord.ab.ca/" target='_blank' className="text-yellow-500 hover:bg-yellow-300 hover:bg-opacity-5 hover:p-0.5 rounded-md">Maurice-Lavallée</a> à Edmonton, en Alberta.
+        Depuis 2011, nous participons avec grand succès à la compétition FIRST Tech Challenge, après qu'un groupe d'anciens membres de la FLL ait dépassé le programme; de là est né l'équipe Hélios. 
         En tant qu'une des équipes vétérans de l'Alberta, bien que toujours très active, nous nous sommes qualifiés à plusieurs reprises pour les championnats provinciaux ainsi que pour le championnat du monde <a href="https://www.firstinspires.org/" target='_blank' className='text-blue-600'>FIRST</a>. 
-        Cela nous a permis de voyager à St. Louis, au Missouri, et à Houston, au Texas, pour participer avec des équipes du monde entier! 
-        Depuis sa création, notre équipe a été composée de nombreux étudiants talentueux et brillants de diverses origines, ainsi que d'un groupe exceptionnel de mentors, d'anciens participants de <a href="https://www.firstinspires.org/" target='_blank' className='text-blue-600'>FIRST</a>, d'enseignants et de parents. 
-        Ce programme a permis à nos membres d'acquérir des compétences non seulement dans le domaine de la robotique, telles que la fabrication et la programmation, mais aussi dans le leadership, la coopération, la résolution de problèmes et la créativité.
+        Cela nous a permis de voyager à St. Louis, au Missouri, et à Houston, au Texas, pour participer avec des équipes du monde entier! Depuis sa création, notre équipe a été composée de nombreux étudiants talentueux et brillants de diverses origines, ainsi que d'un groupe exceptionnel de mentors, d'anciens participants de <a href="https://www.firstinspires.org/" target='_blank' className='text-blue-600'>FIRST</a>d'enseignants et de parents. Ce programme a permis à nos membres d'acquérir des compétences, non seulement dans le domaine de la robotique, telles que la fabrication et la programmation, mais aussi en leadership, en coopération, en résolution de problèmes et en créativité.
         </>
     )
 

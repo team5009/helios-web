@@ -27,7 +27,7 @@ export default function Contact() {
             <div>
                 <label className="block text-sm font-medium leading-6 text-gray-800 dark:text-white">{
                     langStore.language == Language.FR ? 
-                    `Couriel de l'équipe`: 'Team Email'
+                    `Courriel de l'équipe`: 'Team Email'
                 }</label>
                 <a href="mailto:team5009@centrenord.ab.ca" className="block rounded-sm border-0 py-1.5 px-2.5 ring-1">team5009@centrenord.ab.ca</a>
             </div>
