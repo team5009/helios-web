@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import AppProps from 'next/app'
+import type { AppProps } from 'next/app'
 import { setDarkMode, store } from '@/utils'
 import { Provider, useDispatch, useSelector } from 'react-redux'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
