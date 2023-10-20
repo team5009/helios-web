@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import AppProps from 'next/app'
 import { setDarkMode, store } from '@/utils'
 import { Provider, useDispatch, useSelector } from 'react-redux'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
@@ -18,7 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
           <ThemeSwitcher/>
         </div>
         <NavBar/>
-        <Component {...pageProps}/>
+        <div className='my-6'>
+          <Component {...pageProps}/>
+        </div>
         <Footer/>
       </ThemeProvider>
     </Provider>
