@@ -271,5 +271,27 @@
             }
             
         ]
+    },
+    {
+        "name": "Helios",
+        "year": 2024,
+        "awards": [
+            {
+                "id": "control",
+                "name": "Control Award",
+                "position": "1st"
+            },
+            {
+                "id": "design",
+                "name": "Design Award",
+                "position": "2nd"
+            },
+            {
+                "id": "championship",
+                "name": "Northern Finalist Alliance",
+                "position": "Captain"
+            }
+            
+        ]
     }
 ]
