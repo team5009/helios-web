@@ -279,12 +279,14 @@
             {
                 "id": "control",
                 "name": "Control Award",
-                "position": "1st"
+                "position": "1st",
+                "place": "Northern"
             },
             {
                 "id": "design",
                 "name": "Design Award",
-                "position": "2nd"
+                "position": "2nd",
+                "place": "Northern"
             },
             {
                 "id": "championship",
