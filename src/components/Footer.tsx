@@ -15,7 +15,7 @@ export default () => {
         }, 
         {
             name: 'Twitter',
-            link: 'https://twitter.com/team5009',
+            link: 'https://x.com/ftc_5009',
             icon: AiFillTwitterSquare
         },
         {
