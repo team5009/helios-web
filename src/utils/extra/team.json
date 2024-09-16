@@ -292,8 +292,29 @@
                 "id": "championship",
                 "name": "Northern Finalist Alliance",
                 "position": "Captain"
+            },
+            {
+                "id": "innovate",
+                "name": "Innovate Award",
+                "position": "3rd",
+                "place": "AB"
+            },
+            {
+                "id": "championship",
+                "name": "Championship Winning Alliance",
+                "place": "AB"
+            },
+            {
+                "id": "innovate",
+                "name": "Innovate Award",
+                "position": "1st",
+                "place": "K-Days"
+            },
+            {
+                "id": "championship",
+                "name": "Championship Finalist Alliance",
+                "place": "K-Days"
             }
-            
         ]
     }
 ]
