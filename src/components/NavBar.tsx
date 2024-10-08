@@ -52,6 +52,12 @@ export default () => {
                 fr: 'Contactez-Nous'
             },
             link: '/contact',
+        }, {
+            name: {
+                en: "Help us / Donate",
+                fr: "Aidez-nous / Donnez"
+            },
+            link: "https://www.paypal.com/donate/?hosted_button_id=G7LWR7JVRUN8L"
         }
     ]
 

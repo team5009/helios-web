@@ -6,19 +6,24 @@ export default () => {
     const langStore = useSelector((state: any) => state.language)
     const sponsors = [
         {
+            name: "Les Portes Rouges",
+            image: "/images/logos/Les_Portes_Rouges.png",
+            link: "https://www.instagram.com/lesportesrouges/",
+        },
+        {
             name: "Fast Gas",
             image: "/images/logos/fast-gas.png",
-            link: "https://ml.centrenord.ab.ca/",
+            link: "https://www.fasgasplus.ca/",
         },
         {
             name: "Graham",
             image: "/images/logos/Graham_Full_Colour.png",
-            link: ""
+            link: "https://grahambuilds.com/"
         }, 
         {
             name: "Exegen",
             image: "/images/logos/exegen_logo.svg",
-            link: ""
+            link: "#"
         }, 
         {
             name: "Vagabond Robotics",
