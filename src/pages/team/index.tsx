@@ -56,7 +56,7 @@ export default function Team() {
             <div className='relative top-28 w-screen flex flex-col justify-center items-center'>
                 <h1 className='text-lg font-bold'>{}</h1>
                 <div className='aspect-video h-[40vw] bg-no-repeat bg-cover rounded-xl shadow-2xl' style={{
-                    backgroundImage: `url(/images/years/2024.png)`,
+                    backgroundImage: `url(/images/years/2025.png)`,
                 }}/>
                 <h2 className='mt-10 mx-10 md:mx-20 lg:mx-48 text-2xl font-bold'>
                     { langStore.language == Language.FR ?
