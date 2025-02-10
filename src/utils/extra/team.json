@@ -316,5 +316,20 @@
                 "place": "K-Days"
             }
         ]
-    }
+    },
+    {
+        "name": "Helios",
+        "year": 2025,
+        "awards": [
+            {
+                "id": "inspire",
+                "name": "Inspire Award",
+                "position": "1st"
+            },
+            {
+                "id": "championship",
+                "name": "Winning Alliance"
+            }
+        ]
+    },
 ]
